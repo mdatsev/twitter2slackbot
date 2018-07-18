@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  twitter2slack:
+    lang: python3
+    handler: ./twitter2slack
+    image: mdatsev/twitter2slack
+    secrets:
+      - slack-webhook
